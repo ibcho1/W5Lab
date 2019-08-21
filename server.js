@@ -1,14 +1,16 @@
-//npm install body-parser --save
+var express = require('express');
+var app = express();
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
-    extended: false
-}))
+app.use(express.static('images'));
+app.use(express.static('css'));
 
-// parse application/json
-app.use(bodyParser.json())
-app.get('/', function (rqe, res) {
-    res.sendFile(__dirname + '/index.html');
+
+
+app.get('/', function (req, res) {
+    let randomId = Math.round(Math.random() * 100);
+    res.render('index.html', { username: "admin",id: randomId});
 });
 app.listen(8080);
