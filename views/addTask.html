@@ -10,18 +10,16 @@
 </head>
 
 <body>
-    <img src="logo.png" height='100' width="100">
-    <a href="/">Home</a>
-    <a href="listTask.html">List My Tasks</a><br>
+    
+    <h2><img src="logo.png" height='35' width="35"><a href="/">Home</a></h2>
+    <h2><a href="listTask.html">List My Tasks</a></h2><br>
     <form action="/addThisTask" method="POST">
-        <h1>Task Name</h1>
-        <input type="text" name="taskName" /> </br>
+        <h3>Task Name <input type="text" name="taskName"/> </h3>
 
-        <h1>Task Due</h1>
-        <input type="date" name="taskDue" /> </br>
+        <h3>Task Due <input type="date" name="taskDue" /> </h3>
 
-        <h1>Task Desc</h1>
-        <input type="text" name="taskDesc" /> </br>
+        <h3>Task Desc <input type="text" name="taskDesc"/> </h3>
+        
         <br>
         <button>Enter Task</button>
     </form>
