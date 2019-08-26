@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>List Tasks</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,9 +14,24 @@
     <br>
     <a href="/">Home</a>
     <a href="addTask.html">Add Tasks</a><br>
-    <form>
-        <h1>Hello</h1>
-    </form>
+    <h1>Hello These Are Your Tasks</h1>
+
+    <table>
+        <tr>
+            <th>Task Name</th>
+            <th>Due Date</th>
+            <th>Task Description</th>
+        </tr>
+        <% for (let i =0; i < task.length; i++) { %>
+        <tr>
+            <td><%= task[i].taskName %></td>
+            <td><%= task[i].taskDue %></td>
+            <td><%= task[i].taskDesc %></td>
+        </tr>
+        <% } %>
+    </table>
+
+
 </body>
 
 </html>
